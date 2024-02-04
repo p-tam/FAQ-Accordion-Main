@@ -1,0 +1,136 @@
+ :root {
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-pink: hsl(275, 100%, 97%);
+    --color-grayish-purple: hsl(292, 16%, 49%);
+    --color-dark-purple: hsl(292, 42%, 14%);
+
+    --font-size-paragraph: 16px;
+
+    --fw-light: 400;
+    --fw-medium: 600;
+    --fw-heavy: 700;
+
+    --font-family: 'Work Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-light-pink);
+}
+
+.header-img {
+    width: 100%;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    min-height: 300px;
+}
+
+.header-img img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+article {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    position: relative;
+    top: -150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.faq-header {
+    width: 87%;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.faq-header img {
+    width: 20px;
+    margin-right: 22.5px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: var(--fw-medium);
+    margin: 0;
+}
+
+.question-container {
+    display: flex;
+    align-items: center;
+    border-bottom-style: solid;
+    padding-bottom: 10px;
+    border-color: var(--color-light-pink);
+    width: 87%;
+}
+
+button {
+    border: none;
+    background-image: url(assets/images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.active-btn {
+    background-image: url(assets/images/icon-minus.svg);
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: var(--fw-light);
+    width: 75%;
+    
+}
+
+.question-container:hover {
+    cursor: pointer;
+    color: var(--color-grayish-purple);
+}
+
+.answer-container {
+    overflow: hidden;
+    width: 87%;
+    margin-block: 15px;
+}
+
+.animate-down {
+    animation-name: transition-down;
+    animation-duration: 3s;
+}
+
+.answer-container p {
+    color: var(--color-grayish-purple);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
